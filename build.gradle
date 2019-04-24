@@ -14,5 +14,12 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'3.11.0'
-    classpath 'com.netflix.nebula:gradle-lint-plugin:latest.release'
 }
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'com.netflix.nebula:gradle-lint-plugin:latest.release'
+    }
+}
+
+apply plugin: 'nebula.lint'
